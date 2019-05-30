@@ -1,0 +1,19 @@
+#The following creates a simple calculator for regular and overtime pay.
+
+#Define the function
+def computepay(h,r):
+    if h > 40:
+        p = 1.5 * r * (h - 40) + (40 *r)
+    else:
+        p = h * r
+    return p
+
+#assign our variables 
+hrs = input("Enter Hours:")
+hr = float(hrs)
+rate = input("Enter rate per hour:")
+rtpr = float(rate)
+
+#call the function computepay and assign it to the variable p.  We then print the results of computepay against hr (the float of hours) and rtpr (the float of rate)
+p = computepay(hr,rtpr)
+print(p)
